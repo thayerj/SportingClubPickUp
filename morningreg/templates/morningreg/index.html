@@ -1,8 +1,20 @@
+<script type="text/javascript">
+    window.onload(function(){
+        // Get current number of players signed up
+        var players = jQuery("#currentPlayers li").length;
+        // Create the HTML tag for the counter
+        var playerCount = jQuery('<p id = "count">' + players + '</p>');
+        jQuery("#playerCount").append(playerCount); 
+    });
+
+<h2>The Sporting Club at the Bellevue</h2>
+<h3>Morning Pick-Up Basketball</h3>
 <form action="/reg/" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit" />
 </form>
+<div id="playerCount" />
 <div id="currentPlayers">
     {% if players %}
     {% for player in players %}
