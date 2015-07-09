@@ -1,11 +1,13 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript">
-    window.onload(function(){
+    window.onload = function(){
         // Get current number of players signed up
         var players = jQuery("#currentPlayers li").length;
         // Create the HTML tag for the counter
         var playerCount = jQuery('<p id = "count">' + players + '</p>');
         jQuery("#playerCount").append(playerCount); 
     });
+</script>
 
 <h2>The Sporting Club at the Bellevue</h2>
 <h3>Morning Pick-Up Basketball</h3>
